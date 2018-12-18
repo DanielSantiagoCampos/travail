@@ -1,0 +1,18 @@
+version: '2'
+services:
+  web:
+    working_dir: /travail
+    build: .
+    volumes:
+      - "./:/travail"
+    command: "bin/rails s puma -b '0.0.0.0' -p 3000"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database_travail
+    links:
+      - database_travail:database_travail
+  database_travail:
+    image: postgres:9.6
+    volumes:
+      - "./.data/postgres:/var/lib/postgresql/data"
