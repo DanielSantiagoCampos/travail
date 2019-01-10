@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 gem 'rails', '~> 5.1.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
@@ -22,6 +21,9 @@ gem 'react-rails'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem "rspec-rails"
+  gem "database_cleaner"
+  gem "capybara"
 end
 
 group :development do
@@ -30,3 +32,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
