@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Travail
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application'
+  %body
+    = yield
+    = javascript_pack_tag 'application'
