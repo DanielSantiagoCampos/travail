@@ -11,6 +11,7 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'webpacker'
 gem 'react-rails'
+gem 'devise'
 gem 'haml-rails'
 
 # Use Redis adapter to run Action Cable in production
